@@ -5,10 +5,12 @@
 
 #Token: https://discord.com/developers/applications/569131252494368809/bot
 
+import os
 import discord
 from discord.ext import commands
 # import networkx as nx
 
+TOKEN = os.getenv("DISCORD_TOKEN")
 bot=commands.Bot(command_prefix='$')
 
 @bot.event
@@ -48,7 +50,9 @@ async def song(self, x:str):
         await self.send(video)
 
 
-bot.run(TOKEN)
+# bot.run(TOKEN)
+if __name__ == "__main__":
+    bot.run(TOKEN)
 
 
 # In[1]:
