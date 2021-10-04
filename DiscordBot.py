@@ -1,14 +1,7 @@
-
 # coding: utf-8
-
-# In[1]:
-
-#Token: https://discord.com/developers/applications/569131252494368809/bot
-
 import os
 import discord
 from discord.ext import commands
-# import networkx as nx
 
 TOKEN = os.getenv("DISCORD_TOKEN")
 bot=commands.Bot(command_prefix='$')
@@ -25,19 +18,19 @@ async def on_ready():
 @bot.command()
 async def add(self, a: float, b: float):
     await self.send('和: '+ str(a+b))
-    await self.send(a+b)
+#     await self.send(a+b)
 @bot.command()
 async def sub(self, a: float, b: float):
     await self.send('差:')
-    await self.send(a-b)
+#     await self.send(a-b)
 @bot.command()
 async def mul(self, a: float, b: float):
     await self.send('積:')
-    await self.send(a*b)
+#     await self.send(a*b)
 @bot.command()
 async def div(self, a: float, b: float):
     await self.send('商:')
-    await self.send(a/b)
+#     await self.send(a/b)
 
 #影片佇列
 @bot.command()
@@ -53,11 +46,3 @@ async def song(self, x:str):
 # bot.run(TOKEN)
 if __name__ == "__main__":
     bot.run(TOKEN)
-
-
-# In[1]:
-
-# import discord
-
-# print(discord.__version__)
-
