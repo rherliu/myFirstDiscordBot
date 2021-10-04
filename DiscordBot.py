@@ -32,6 +32,10 @@ async def div(self, a: float, b: float):
     await self.send('商:')
 #     await self.send(a/b)
 
+@bot.command()
+async def ping(ctx):
+    await ctx.send("pong")
+
 #影片佇列
 @bot.command()
 async def song(self, x:str):
