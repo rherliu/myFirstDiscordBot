@@ -9,7 +9,6 @@ import discord
 from discord.ext import commands
 # import networkx as nx
 
-# TOKEN='NTY5MTMxMjUyNDk0MzY4ODA5.XLsKyA.xtnjRgyAO7fZX7-sYHx7WrqIFZk'
 bot=commands.Bot(command_prefix='$')
 
 @bot.event
@@ -54,7 +53,7 @@ bot.run(TOKEN)
 
 # In[1]:
 
-import discord
+# import discord
 
-print(discord.__version__)
+# print(discord.__version__)
 
