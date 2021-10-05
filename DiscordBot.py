@@ -17,19 +17,19 @@ async def on_ready():
 #基礎四則運算：add(+), sub(-), mul(*), div(/)
 @bot.command()
 async def add(self, a: float, b: float):
-    await self.send('sum: '+ str(a+b))
+    await self.send('sum: '+str(a+b))
 
 @bot.command()
 async def sub(self, a: float, b: float):
-    await self.send('difference:')
+    await self.send('difference:'+str(a-b))
 
 @bot.command()
 async def mul(self, a: float, b: float):
-    await self.send('product:')
+    await self.send('product:'+str(a*b))
 
 @bot.command()
 async def div(self, a: float, b: float):
-    await self.send('quotient:')
+    await self.send('quotient:'+str(a/b))
 
 @bot.command()
 async def ping(ctx):
