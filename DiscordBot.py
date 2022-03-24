@@ -40,15 +40,12 @@ async def BinaryEquation(self, a:str, b:str, c:str):
     A = a.split("/")
     B = b.split("/")
     C = c.split("/")
-    if A[1] == 0 or B[1] == 0 or C[1] == 0:
-        await self.send("分母不可為 0")
-    else:
-        outputA = int(A[0]) / int(A[1])
-        outputB = int(B[0]) / int(B[1])
-        outputC = int(C[0]) / int(C[1])
-        d = (outputB * outputB - 4 * outputA * outputC)**0.5
-        await self.send("x1="+((-1 * outputB) + d) / (2 * outputA))
-        await self.send("x2="+((-1 * outputB) - d) / (2 * outputA))
+    outputA = int(A[0]) / int(A[1])
+    outputB = int(B[0]) / int(B[1])
+    outputC = int(C[0]) / int(C[1])
+    d = (outputB * outputB - 4 * outputA * outputC)**0.5
+    await self.send("x1="+((-1 * outputB) + d) / (2 * outputA))
+    await self.send("x2="+((-1 * outputB) - d) / (2 * outputA))
 
 if __name__ == "__main__":
     bot.run(TOKEN)
