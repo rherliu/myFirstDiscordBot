@@ -47,8 +47,8 @@ async def BinaryEquation(self, a:str, b:str, c:str):
         outputB = int(B[0]) / int(B[1])
         outputC = int(C[0]) / int(C[1])
         d = (outputB * outputB - 4 * outputA * outputC)**0.5
-        await self.send("x1=",((-1 * outputB) + d) / (2 * outputA))
-        await self.send("x2=",((-1 * outputB) - d) / (2 * outputA))
+        await self.send("x1="+((-1 * outputB) + d) / (2 * outputA))
+        await self.send("x2="+((-1 * outputB) - d) / (2 * outputA))
 
 if __name__ == "__main__":
     bot.run(TOKEN)
