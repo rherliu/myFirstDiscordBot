@@ -49,7 +49,7 @@ async def BinaryEquation(self, a:str, b:str, c:str):
 
 @bot.command()
 async def clear(self, ctx, num:int):
-    await ctx.channel.purge(limit = num+1)
+    await self.channel.purge(limit = num+1)
 
 if __name__ == "__main__":
     bot.run(TOKEN)
