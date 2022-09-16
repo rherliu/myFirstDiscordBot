@@ -47,7 +47,7 @@ async def BinaryEquation(self, a:str, b:str, c:str):
     await self.send("x1="+str(((-1 * outputB) + d) / (2 * outputA)))
     await self.send("x2="+str(((-1 * outputB) - d) / (2 * outputA)))
 
-@bot.command()
+@.command()
 async def clear(self, ctx, num:int):
     await ctx.channel.purge(limit = num+1)
 
